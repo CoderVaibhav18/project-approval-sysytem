@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page with Dropdown</title>
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        nav {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown button {
+            background-color: white;
+            color: #007bff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 40px;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            list-style: none;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 10;
+        }
+
+        .dropdown-menu li {
+            margin: 5px 0;
+        }
+
+        .dropdown-menu li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .dropdown-menu li a:hover {
+            text-decoration: underline;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Landing Section */
+        .landing {
+            height: 100vh;
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .landing h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .landing p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* Sections */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .bg-light {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="brand">Project Approval</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="dropdown">
+            <button>Login</button>
+            <ul class="dropdown-menu">
+                <li><a href="/student/login">Student Login</a></li>
+                <li><a href="/hod/login">HOD Login</a></li>
+                <li><a href="/student/signup">Student SignUp</a></li>
+                <li><a href="/hod/signup">HOD SignUp</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Landing Section -->
+    <header class="landing">
+        <div>
+            <h1>Welcome to Project Approval</h1>
+            <p>Connect, Learn, and Grow with our innovative platform designed for students.</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>BIT Connect bridges the gap between students and faculty with an intuitive platform for collaboration and learning.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-light">
+        <h2>Our Services</h2>
+        <p>Discover our tools for effective collaboration, resource sharing, and management.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: support@Helloconnect.com</p>
+        <p>Phone: +123 456 789</p>
+    </section>
+</body>
+</html>

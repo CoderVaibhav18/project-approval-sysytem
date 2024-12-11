@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Page</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #4caf50, #2e8b57);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .signup-box {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+        }
+        .signup-box h1 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+        .signup-box form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .signup-box label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .signup-box input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .signup-box button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .signup-box button:hover {
+            background-color: #2e8b57;
+        }
+        .already-login {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .already-login a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .already-login a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-box">
+        <h1>Sign-Up</h1>
+        <form id="signupForm" action="/student/signup" method="post">
+            <div>
+                <label for="name">Name</label>
+                <input type="text"  id="name" placeholder="Enter your name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email ID</label>
+                <input type="email"  id="email" placeholder="Enter your Email ID" name="email" required>
+            </div>
+            <div>
+                <label for="password">Set Password</label>
+                <input type="password" id="password"  placeholder="Enter your password" name="password" required>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <div class="already-login">
+            <a href="/">Already signed up? Log in here</a>
+        </div>
+    </div>
+</body>
+</html>
