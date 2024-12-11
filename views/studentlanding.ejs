@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+        .navbar {
+            background-color: #4caf50;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        .welcome-section {
+            padding: 50px;
+            background: linear-gradient(135deg, #4caf50, #2e8b57);
+            color: white;
+            text-align: center;
+        }
+        .dashboard-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 250px;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card h5 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .card p {
+            margin-bottom: 15px;
+            font-size: 0.9em;
+            color: #555;
+        }
+        .card a {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #4caf50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .card a:hover {
+            background: #2e8b57;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div>Student Dashboard</div>
+        <div>
+            <a href="#">Profile</a>
+            <a class="logoutbtn" href="/student/login">Logout</a>
+        </div>
+    </div>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <h1>Welcome, <%= studentName %>!</h1>
+        <p>Your personalized dashboard to manage everything at your fingertips.</p>
+    </section>
+
+    <!-- Dashboard Features -->
+    <section class="dashboard-cards">
+        <!-- Card 1 -->
+        <div class="card">
+            <h5>Project Approval</h5>
+            <p>Access and manage your enrolled courses.</p>
+            <a href="/student/Approval">View Project Approval</a>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="card">
+            <h5>Schedule</h5>
+            <p>Stay organized with your class schedule.</p>
+            <a href="#">View Schedule</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <h5>Notifications</h5>
+            <p>Stay updated with the latest announcements.</p>
+            <a href="#">View Notifications</a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <h5>Support</h5>
+            <p>Need help? Contact the admin team.</p>
+            <a href="#">Get Support</a>
+        </div>
+    </section>
+    <script>
+        let logout = document.getElementsByClassName("logoutbtn")
+        logout.addEventListener("click", () =>{
+            alert("do you sure to logout")
+        })
+    </script>
+</body>
+</html>

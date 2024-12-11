@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOD Dashboard</title>
+    <style>
+        body {
+            background: #f5f5f5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #343a40;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .navbar-brand {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .nav-link:hover {
+            background-color: #495057;
+        }
+
+        .welcome-section {
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #343a40, #6c757d);
+            color: white;
+            text-align: center;
+        }
+
+        .dashboard-cards {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            max-width: 90%;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-title {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .dashboard-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .welcome-section h1 {
+                font-size: 1.5em;
+            }
+
+            .welcome-section p {
+                font-size: 1em;
+            }
+
+            .card-title {
+                font-size: 1em;
+            }
+
+            .btn {
+                font-size: 0.9em;
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a class="navbar-brand" href="#">HOD Dashboard</a>
+        <div class="nav-links">
+            <a class="nav-link" href="#">Profile</a>
+            <a class="nav-link" href="/hod/logout">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <h1>Welcome, <%= hodName %>!</h1>
+        <p>Manage your department, faculty, and students efficiently.</p>
+    </section>
+
+    <!-- Dashboard Features -->
+    <section class="dashboard-cards">
+        <!-- Card 1 -->
+        <div class="card">
+            <h5 class="card-title">Student Projects</h5>
+            <p class="card-text">Add, update, and manage Project.</p>
+            <a href="/hod/dashboard" class="btn">View Projects</a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <h5 class="card-title">Student Records</h5>
+            <p class="card-text">Access and update student information.</p>
+            <a href="/hod/dashboard" class="btn">View Records</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <h5 class="card-title">Notices</h5>
+            <p class="card-text">Publish and manage department notices.</p>
+            <a href="#" class="btn">Manage Notices</a>
+        </div>
+    </section>
+</body>
+</html>
